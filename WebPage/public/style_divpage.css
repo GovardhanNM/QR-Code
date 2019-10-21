@@ -1,0 +1,46 @@
+body {
+    background-color: grey;
+}
+
+#main {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}
+
+.button {
+    background-color: aqua;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.button:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#signout {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#goback {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}

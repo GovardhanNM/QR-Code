@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style_divpage.css">
+    <title>CSB</title>
+</head>
+
+<body onload="initApp()">
+    <div id="main">
+        <a href="generate.html">
+            <p class="button">
+                GENERATE QR</p>
+        </a>
+        <a href="info.html">
+            <p class="button">
+                UPDATE INFORMATION</p>
+        </a>
+
+        <button id="signout" onclick="signout()">Sign out</button>
+    </div>
+
+    <div id="hint">
+        <p id="goback">Note = You should sign out to go to previous page!!!</p>
+    </div>
+    <script src="/__/firebase/6.2.4/firebase-app.js"></script>
+    <script src="/__/firebase/6.2.4/firebase-auth.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="divpage.js"></script>
+</body>
+
+</html>

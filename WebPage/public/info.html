@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style_generate.css">
+    <title>Update Info</title>
+</head>
+
+<body>
+    <div id="data">
+        <div id="update_info">
+            <p>Update Information</p>
+        </div>
+
+        <p>Select the values to be updated</p>
+        <div id="form">
+            <div class="checkbox">
+                <label>
+                        <input type="checkbox" id="check_link" onclick="display_input('link_hidden')">
+                        Youtube Link
+                    </label>
+            </div>
+
+            <div class="checkbox">
+                <label>
+                        <input type="checkbox" id="check_image" onclick="display_input('image_hidden')">
+                            Image
+                        </label>
+            </div>
+
+            <div class="checkbox">
+                <label>
+                        <input type="checkbox" id="check_info" onclick="display_input('file_hidden')">
+                                Information
+                            </label>
+            </div>
+
+        </div>
+
+        <br><br>
+        <div hidden="hidden" id="link_hidden">
+            <div class="name_container">
+                <label for="link" id="text_label">Youtube Link :</label>
+                <input type="url" id="link" onblur="isURL()">
+            </div>
+        </div>
+        <br><br>
+        <div hidden id="image_hidden">
+            <div class="container">
+                <label for="myimage" id="label">Choose image :</label>
+                <input type="file" id="myimage" accept="image/*">
+            </div>
+        </div>
+
+        <br><br>
+        <div hidden id="file_hidden">
+            <div class="container" hidden>
+                <label for="myfile" id="label">Choose txt file :</label>
+                <input type="file" id="myfile" accept="text/*">
+            </div>
+        </div>
+        <br><br>
+
+        <button id="update" onclick="update_info()">Update</button>
+
+
+        <script src="generate.js"></script>
+        <script src="info.js"></script>
+
+    </div>
+</body>
+
+</html>

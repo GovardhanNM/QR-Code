@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style_index.css">
+    <script src="/__/firebase/6.2.4/firebase-app.js"></script>
+    <script src="/__/firebase/6.2.4/firebase-auth.js"></script>
+    <script src="/__/firebase/init.js"></script>
+</head>
+
+<body onload="initApp()">
+    <div id="content">
+        <h2>Sign In</h2>
+        <div class="container">
+            <label for="email">Email :</label>
+            <input type="email" id="email" onblur="check_length('email')">
+        </div>
+        <br>
+        <div class="container">
+            <label for="password">Password :</label>
+            <input type="password" id="password" onblur="check_length('password')">
+        </div>
+        <br>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

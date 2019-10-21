@@ -1,0 +1,30 @@
+body {
+    background-color: grey;
+    display: flex;
+}
+
+#content {
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0px;
+}
+
+.container {
+    display: flex;
+}
+
+label {
+    flex: 0.5;
+    text-align: right;
+}
+
+#email,
+#password {
+    flex: 1;
+    margin-left: 10px;
+}

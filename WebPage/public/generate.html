@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style_generate.css">
+    <title>Generate QR</title>
+</head>
+
+<body>
+    <div id="data">
+        <div class="name_container">
+            <label for="name" id="text_label">Name :</label>
+            <input type="text" id="name" onblur="check_length('name')">
+        </div>
+
+        <br><br>
+        <div class="name_container">
+            <label for="link" id="text_label">Youtube Link :</label>
+            <input type="url" id="link" onblur="isURL()">
+        </div>
+
+        <br><br>
+
+        <div class="container">
+            <label for="image" id="label">Choose image :</label>
+            <input type="file" id="myimage" accept="image/*">
+        </div>
+
+        <br><br>
+
+        <div class="container">
+            <label for="button" id="label">Choose txt file :</label>
+            <input type="file" id="myfile" accept="text/*">
+        </div>
+
+        <br><br>
+
+        <button id="generate" onclick="validate()">Generate</button>
+    </div>
+
+    <div id="qr_code_view">
+        <p id="QR">Your QR Code appears here</p><br>
+        <canvas id="qr"></canvas>
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+        <button id="saveqr" onclick="saveQR()">Save</button>
+    </div>
+    <script src="/__/firebase/6.2.4/firebase-app.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBiKrbvKRE58QjSMElPSYKk8s7BERec94Y",
+            authDomain: "csb-qrcode.firebaseapp.com",
+            databaseURL: "https://csb-qrcode.firebaseio.com",
+            projectId: "csb-qrcode",
+            storageBucket: "csb-qrcode.appspot.com",
+            messagingSenderId: "342651169283",
+            appID: "1:342651169283:web:4265c178953c137a",
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="/__/firebase/6.2.4/firebase-auth.js"></script>
+    <script src="/__/firebase/6.3.4/firebase-storage.js"></script>
+    <script src="/__/firebase/6.3.4/firebase-database.js"></script>
+    <script src="qrious.js"></script>
+    <script src="generate.js"></script>
+
+</body>
+
+</html>
